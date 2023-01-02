@@ -1,16 +1,14 @@
 package kata6;
 
-import com.google.gson.annotations.SerializedName;
 import java.util.List;
-import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlRootElement;
 
 @XmlRootElement
 public class Meaning {
-    String partOfSpeech;
-    List<Definition> definitions;
-    List<String> synonyms;
-    List<String> antonyms;
+    public String partOfSpeech;
+    public List<Definition> definitions;
+    public List<String> synonyms;
+    public List<String> antonyms;
 
     @Override
     public String toString() {
@@ -21,10 +19,10 @@ public class Meaning {
     }
 
     
-    private static class Definition {
-        String definition;
-        List<String> synonyms;
-        List<String> antonyms;
+    public static class Definition {
+        public String definition;
+        public List<String> synonyms;
+        public List<String> antonyms;
 
         @Override
         public String toString() {
